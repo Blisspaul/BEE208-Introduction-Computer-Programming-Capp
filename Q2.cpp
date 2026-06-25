@@ -1,19 +1,20 @@
-#include <iostream>
-#include <cmath>
+#include<iostream>
 using namespace std;
 
 int main(){
-	double radius, area;
-	const double PI = 3.142;
+	float ratedCurrent,measuredCurrent;
 	
-	cout<<"Enter radius:";
-	cin>> radius;
+	cout<<"Enter rated current of circuit breaker:";
+	cin>>ratedCurrent;
 	
-	area= PI *pow(radius,2);
+	cout<<"Enter measured current in circuit:";
+	cin>>measuredCurrent;
 	
-	cout<<"Area of circle = " <<area << endl;
-	
+	if(measuredCurrent>ratedCurrent){
+		cout<<"Overload detected. Circut breaker should trip."<<endl;
+	}
+	else{
+		cout<<"Current is within safe limit."<<endl;
+	}
 	return 0;
-	
 }
-

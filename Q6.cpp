@@ -1,17 +1,18 @@
 #include <iostream>
-#include <cctype>
 using namespace std;
-
-int main(){
-	char ch;
-	cout<<"Enter a character:";
-	cin>>ch;
 	
-	if (isupper(ch))
-	cout<<"Uppercase letter"<< endl;
-	
-	else
-	cout<<"Not an uppercase letter"<< endl;
-	
-	return 0;
-}
+	int main(){
+		double R, total =0.0;
+		
+		cout<< "Series Resistor Calculator\n";
+		cout<<"Enter 5 resistor values:\n\n";
+		
+		for(int i=1; i<=5; i++){
+			cout<<"Enter resistor" << i<<"value (ohms):";
+			cin>> R;
+			total+=R;
+		}
+		cout<<"\nTotal Resistance ="<< total<<"Ohms"<< endl;
+		
+		return 0;
+	}

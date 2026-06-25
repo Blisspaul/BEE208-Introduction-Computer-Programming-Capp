@@ -1,13 +1,23 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
-	int x = 5;
+	double current;
 	
-	if (x==5){
+	cout<<"Current Monitoring System\n";
+	cout<<"Enter current readings(A) -stops when>10A\n\n";
+	
+	while(true){
+		cout<<"Enter current readings(A):";
+		cin>>current;
 		
-		cout<<"Equal";
+		if(current <=10.0){
+			cout<<"Safe:"<<current<<"A"<<endl;
+			
+		}else{
+			cout<<"\n***Overcurrent detected.Monitoring stopped.***\n";
+			break;
+		}
 	}
+	return 0;
 }
-
-

@@ -1,18 +1,22 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
-	int a, b;
-	cout<<"Enter two integers:";
-	cin>> a>> b;
+	float voltage;
 	
-	cout<<"Before swap:a= "<< a<<", b ="<< b << endl;
+	cout<<"=====Battery Voltage Test====="<<endl;
+	cout<<"Testing up to 10 battery voltage readings..."<<endl;
 	
-	a = a^ b;
-	b = a^ b;
-	a = a^ b;
-	
-	cout<<"After swap:a =" << a <<",b= "<< b << endl;
-	
+	for(int i=1;i<=10;i++){
+		cout<<"Enter battery voltage readings"<<i<<":";
+		cin>>voltage;
+		
+		if(voltage<10.5){
+			cout<<"Low battery detected.Test stopped."<<endl;
+			break;
+		}else{
+			cout<<"Battery voltage normal"<<endl;
+		}
+	}
 	return 0;
 }

@@ -1,17 +1,23 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main(){
-	string input;
-	cout<<"Enter a string:";
-	cin>> input;
+	double voltage,total=0.0,average;
+	const int READING =10;
 	
-	if(input.find('a') != string ::npos)
-	cout<<"Does not contains 'a'"<< endl;
+	cout<<"Average Voltage Calculator\n";
+	cout<<"Enter "<<READING<<"voltage readings:\n\n";
 	
-	else
-	cout<<"Does not contain 'a'" << endl;
-	
-	return 0;
+	for (int i= 1;i<= READING; i++)
+{
+		
+
+cout<<"Enter reading"<<i<<"(Voits):";
+cin>>voltage;
+total+= voltage;
+}
+average=total/READING;
+cout<<"\nAverage Voltage="<<average<<"V"<<endl;
+
+return 0;
 }

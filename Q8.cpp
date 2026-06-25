@@ -2,15 +2,26 @@
 using namespace std;
 
 int main(){
-	int num;
-	cout<<"Enter an integer:";
-	cin>> num;
+	double current;
+	int safe=0,unsafe=0;
+	const int READINGS=8;
 	
-	if(num % 2 !=0)
-	cout<<"Odd number"<< endl;
+	cout<<"Current Monitoring System\n";
+	cout<<"Enter"<<READINGS<<"current readings\n\n";
 	
-	else
-	cout<<"Even number"<< endl;
+	for(int i=1;i<=READINGS;i++)
+	{
+		cout<<"Enter reading"<<i<<"(Amperes):";
+		cin>>current;
+		
+		if(current<=10.0){
+			safe++;
+			cout<<"SAFE(<=10A)\n";
+			cout<<"UNSAFE(>10A)\n";
+		}
+	}
+	cout<<"\n---Summary---\n";
+	cout<<"Safe readings:"<<unsafe<<endl;
 	
-	return 0;
+	return 0;567
 }

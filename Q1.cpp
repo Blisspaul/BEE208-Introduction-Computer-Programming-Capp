@@ -1,26 +1,26 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
 int main(){
+	float voltage;
 	
-	int a;
-	int b;
-	cout<<"Enter two integers:" << "\n";
-	cout << "Enter first value: ";
-	cin >> a;
-	cout << "Enter second value: ";
-	cin >> b;
+	cout<<"Enter voltage reading:";
+	cin>>voltage;
 	
-	cout<< "Sum = "<< a+b<< endl;
-	cout<< "Difference = "<<a-b<< endl;
-	cout<<"Product= "<<a*b<< endl;
-	
-	if (b!=0)
-	cout<<"Quotient = "<< a/b<< endl;
-	
-	else
-	cout<<"Quotient = undefined (division by zero)"<< endl;
-	
+	if(voltage<0){
+		cout<<"Invalid voltage reading"<<endl;
+	}
+	else if(voltage<=50){
+		cout<<"Low voltage (0-50 V)"<<endl;
+	}
+	else if(voltage<=240){
+		cout<<"Normal voltage (51-240 V)"<<endl;
+	}
+	else if(voltage<=415){
+		cout<<"High voltage(241-415 V)"<<endl;
+	}
+	else{
+		cout<<"Dangerous voltage(above 415 V)"<<endl;
+	}
 	return 0;
 }

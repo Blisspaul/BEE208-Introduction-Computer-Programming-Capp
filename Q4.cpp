@@ -1,17 +1,36 @@
-#include <iostream>
-#include <string>
+#include<iostrEam>
 using namespace std;
 
 int main(){
-	string input;
-	cout<<"Enter a string :";
-	cin>> input;
+	int choice;
 	
-	if(input=="hello")
-	cout<<"Hello!" << endl;
+	cout<<"=====Electrical Component Menu====="<<endl;
+	cout<<"1.Resistor"<<endl;
+	cout<<"2.Capacitor"<<endl;
+	cout<<"3.Diode"<<endl;
+	cout<<"4.Transistor"<<endl;
+	cout<<"5.LED"<<endl;
+	cout<<"Enter your choice(1-5):";
+	cin>>choice;
 	
-	else
-	cout<<"Goodbye!" << endl;
-	
+	switch(choice){
+		case 1:
+			cout<<"Resistor: Used to limit current in a circuit"<<endl;
+			break;
+		case 2:
+		cout<<"Capacitor: Stores electical charge"<<endl;
+			break;
+		case 3:
+		cout<<"Diode:Allows current flow in one direction"<<endl;
+			break;
+		case 4:
+		cout<<"Transistor:Amplifies or switches electronic signals"<<endl;
+			break;
+		case 5:
+		cout<<"LED:Emits light when current flows through it"<<endl;
+			break;
+		default:
+		cout<<"Invalid selection"<<endl;	
+	}
 	return 0;
 }
